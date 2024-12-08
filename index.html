@@ -1,0 +1,379 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Aria is a business focused HTML landing page template built with Bootstrap to help you create lead generation websites for companies and their services.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>World Wide Travel</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/fontawesome-all.css' %}" rel="stylesheet">
+    <link href="{% static 'css/swiper.css' %}" rel="stylesheet">
+	<link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+	<link href="{% static 'css/styles.css' %}" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="{{ fav_icon.icon.url }}">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="{% url 'index' %}"><img src="{{ home_logo.img.url }}" alt="alternative"></a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#intro">ABOUT</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#projects">ADVENTURE</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#contact">CONTACT</a>
+                </li>
+            </ul> </span>
+        </div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navbar -->
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <h1>{{ home_bg_info.static_text }} <span id="js-rotating">{{ home_bg_info.dinamic_text1 }}, {{ home_bg_info.dinamic_text2 }}, {{ home_bg_info.dinamic_text3 }}</span></h1>
+                            <p class="p-heading p-large">{{ home_bg_info.about }}</p>
+                            <a class="btn-solid-lg page-scroll" href="#intro">{{ home_bg_info.button_name }}</a>
+                        </div>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+
+    <!-- Intro -->
+    <div id="intro" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <div class="section-title">ABOUT</div>
+                        <h2>Plan your trip</h2>
+                
+                        <p class="testimonial-text">"Welcome to World Wide Travel, your go-to destination for unforgettable travel experiences! Whether you're a seasoned explorer or planning your first adventure, we're here to help you plan your next trip with ease and excitement. Our mission is simple: to make travel accessible, fun, and stress-free for everyone.
+                            
+                            Our team of passionate travelers and experts work tirelessly to ensure that every journey you embark on is memorable.
+                            So, where to next? Let us guide you toward your next adventure!"
+                         </p>
+                    </div> <!-- end of text-container --
+                </div> <!- end of col -->
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="{{ about.img.url }}" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of intro -->
+
+
+   
+   
+    <!-- Projects -->
+	<div id="projects" class="filter">
+		<div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">ADVENTURE</div>
+                    <h2>Where to go next</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Filter -->
+                    <div class="grid">
+                        {% for i in projects %}
+                        {% for j in i.proj.all %}
+                            <div class="element-item development">
+                                <a class="popup-with-move-anim" href="#project-{{ i.id }}"><div class="element-item-overlay"><span>{{ j.name }}</span></div><img src="{{ j.img.url }}" alt="alternative"></a>
+                            </div>
+                        {% endfor %}
+                       {% endfor %}
+                    </div> <!-- end of grid -->
+                    <!-- end of filter -->
+                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+		</div> <!-- end of container -->
+    </div> <!-- end of filter -->
+    <!-- end of projects -->
+<!-- Projects -->
+<div id="rio-projects" class="filter">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">RIO DE JANEIRO</div>
+                <h2>Discover the Vibrance</h2>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Filter -->
+                <div class="grid">
+                    {% for rio_project in rio_projects %}
+                    {% for gallery_item in rio_project.proj_rio.all %}
+                        <div class="element-item development">
+                            <a class="popup-with-move-anim" href="#project-rio-{{ rio_project.id }}">
+                                <div class="element-item-overlay">
+                                    <span>{{ gallery_item.name }}</span>
+                                </div>
+                                <img src="{{ gallery_item.img.url }}" alt="alternative">
+                            </a>
+                        </div>
+                    {% endfor %}
+                    {% endfor %}
+                </div> <!-- end of grid -->
+                <!-- end of filter -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of filter -->
+
+<!-- end of projects -->
+ <!-- Projects -->
+<div id="rio-projects" class="filter">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">RIO DE JANEIRO</div>
+                <h2>Discover the Vibrance</h2>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Filter -->
+                <div class="grid">
+                    {% for rio_project in rio_projects %}
+                    {% for gallery_item in rio_project.proj_rio.all %}
+                        <div class="element-item development">
+                            <a class="popup-with-move-anim" href="#project-rio-{{ rio_project.id }}">
+                                <div class="element-item-overlay">
+                                    <span>{{ gallery_item.name }}</span>
+                                </div>
+                                <img src="{{ gallery_item.img.url }}" alt="alternative">
+                            </a>
+                        </div>
+                    {% endfor %}
+                    {% endfor %}
+                </div> <!-- end of grid -->
+                <!-- end of filter -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of filter -->
+<!-- end of projects -->
+
+<!-- Project Lightboxes -->
+{% for rio_project in rio_projects %}
+    <div id="project-rio-{{ rio_project.id }}" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <div class="col-lg-8">
+                    {% if rio_project.img %}
+                        <img class="img-fluid" src="{{ rio_project.img.url }}" alt="alternative">
+                    {% else %}
+                        <p>No image available</p>
+                    {% endif %}
+                </div>
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>{{ rio_project.name }}</h3>
+                <hr class="line-heading">
+                <h6>{{ rio_project.name }}</h6>
+                <p>{{ rio_project.text1 }}</p>
+                <p>{{ rio_project.text2 }}</p>
+
+                <!-- Button to trigger the content loading for details -->
+                <button class="btn-solid-reg" id="details-btn-rio-{{ rio_project.id }}">DETAILS</button>
+                <a class="btn-outline-reg mfp-close as-button" href="#rio-projects">BACK</a> 
+                
+                <!-- Container where Rio content will be dynamically loaded -->
+                <div id="rio-details-{{ rio_project.id }}" class="rio-details">
+                    <!-- Content will be added dynamically here -->
+                </div>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+{% endfor %}
+<!-- end of lightbox -->
+
+<!-- Project Lightboxes -->
+<!-- Lightbox -->
+{% for i in projects %}
+    <div id="project-{{ i.id }}" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <div class="col-lg-8">
+                    {% if i.image %}
+                        <img class="img-fluid" src="{{ i.image.url }}" alt="alternative">
+                    {% else %}
+                        <p>No image available</p>
+                    {% endif %}
+                </div>
+                
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>{{ i.name1 }}</h3>
+                <hr class="line-heading">
+                <h6>{{ i.name1 }}</h6>
+                <p>{{ i.text1 }}</p>
+                <p>{{ i.text2 }}</p>
+
+                <!-- Button to trigger the content loading for details -->
+                <button class="btn-solid-reg" id="details-btn-maldives">DETAILS</button>
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                
+                <!-- Container where Maldives content will be dynamically loaded -->
+                <div id="maldives-details" class="maldives-details">
+                    <!-- Content will be added dynamically here -->
+                </div>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+{% endfor %}
+<!-- end of lightbox -->
+
+
+    <!-- Contact -->
+    <div id="contact" class="form-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <div class="section-title">CONTACT</div>
+                        <h2>{{ contact.name }}</h2>
+                        <p>{{ contact.desc }}</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="address"><i class="fas fa-map-marker-alt"></i>Yerevan</li>
+                            <li><i class="fas fa-phone"></i><a href="tel:093-13-04-91">093-13-04-91</a></li>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:WorldWideTravel@gmail.com">WorldWideTravel@gmail.com</a></li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    
+                    <!-- Contact Form -->
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control-input" required>
+                            <label class="label-control">Name</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control-input" required>
+                            <label class="label-control">Email</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control-textarea" name="message" required></textarea>
+                            <label class="label-control">Your message</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
+                        </div>
+                    </form>
+                    <!-- end of contact form -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form-2 -->
+    <!-- end of contact -->
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-container about">
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+    
+    	
+    <!-- Scripts -->
+    <script src="{% static 'js/jquery.min.js' %}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{% static 'js/popper.min.js' %}"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{% static 'js/swiper.min.js' %}"></script> <!-- Swiper for image and text sliders -->
+    <script src="{% static 'js/jquery.magnific-popup.js' %}"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="{% static 'js/morphext.min.js' %}"></script> <!-- Morphtext rotating text in the header -->
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script> <!-- Isotope for filter -->
+    <script src="{% static 'js/validator.min.js' %}"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="{% static 'js/scripts.js' %}"></script> <!-- Custom scripts -->
+</body>
+</html>
